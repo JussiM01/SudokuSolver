@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     print("")
     print("More over, using the module sudokusolver, we can solve it. The solution is:")
-    print("(Wait for a while.)")
+    print("(Wait for a while)")
     print("")
 
     solution = solve(table)
