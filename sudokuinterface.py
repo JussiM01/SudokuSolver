@@ -8,11 +8,13 @@ print('Empty squares are presented as dots.')
 table = input('write the string representation here (without quote marks):')
 
 validicity = ['The sudoku is not valid. It dose not have any solutions.',
-    'Solution found. It is:']
+    'Unique solution found. It is:',
+    'The sudoku is not valid. Multiple solutions found.']
 
 def check_validicity(solution):
-    if len(solution) == 0: return validicity[0]
-    return validicity[1]
+    if len(solution) < 81: return validicity[0]
+    if len(solution) == 81: return validicity[1]
+    return validicity[2] 
 
 solution = solve(table)
 print(len(solution))
